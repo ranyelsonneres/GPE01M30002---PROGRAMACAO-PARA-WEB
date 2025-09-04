@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #006600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Abastecimento</h1>
+    <form>
+        <label for="">Tipo Combustivel</label>
+        <select name="combustivel" id="combustivel">
+            <option value="gasolina">Gasolina</option>
+            <option value="etanol">Etanol</option>
+            <option value="diesel">Diesel</option>
+        </select>
+        <label for="">Qtde Litros</label>
+        <input type="number" id="litros" step="0.1" min="0" required>
+    </form>
+    <h2>Resultado</h2>
+    <p id="resultado"></p>
+    <script src="script.js"></script>
+</body>
+</html>
