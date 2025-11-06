@@ -16,6 +16,13 @@ app.get('/', (req, res) =>{
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+//trazer o arquivo de rotas (API.JS)
+const apiRoutes = require('./routes/api');
+app.use(express.json()); //para o server ter a capacidade de tratar dados no formato json
+
+//alcançar todas as rotas (api.js)
+app.use('/api/users/', apiRoutes);
+
 //instanciar o servidor a porta
 app.listen(port, () =>{
     console.log("Servidor funcionando");
